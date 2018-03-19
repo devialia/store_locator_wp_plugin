@@ -24,6 +24,15 @@ function check_acf_plugin_installed(){
     }
 }
 
+/**
+* Variables globales y constanes
+*/
+define( "STORES_PATH", "/wp-admin/edit.php?post_type=stores" );
+define( "NEW_STORE_PATH", "/wp-admin/post-new.php?post_type=stores" );
+define( "STORES_LOCATIONS_PATH", "/wp-admin/edit-tags.php?taxonomy=stores_locations&post_type=stores" );
+define( "STORE_LOCATOR_CONFIG_PATH", "/wp-admin/edit.php?post_type=stores&page=devialia-store-locator" );
+
+
 include('includes/functions.php');
 include('includes/rol.php');
 include('includes/locales.php');

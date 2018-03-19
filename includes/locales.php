@@ -42,7 +42,7 @@ function devialia_stores_cpt() {
 		"hierarchical" => false,
 		"rewrite" => array( "slug" => "store" ),
 		"query_var" => true,
-		"menu_icon" => "https://icons.iconarchive.com/icons/designcontest/ecommerce-business/16/store-icon.png",
+		"menu_icon" => plugin_dir_url( dirname(__FILE__) ) . "img/store-icon.png",
 		"supports" => array( "title", "editor", "custom-fields" ),
 	);
 
@@ -523,6 +523,23 @@ acf_add_local_field_group(array (
 	'title' => 'Datos de la tienda',
 	'fields' => array (
 		array (
+			'key' => 'group_devialia_sl_stores_data_8',
+			'label' => 'Descripción',
+			'name' => '',
+			'type' => 'message',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '100',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'new_lines' => 'wpautop',
+			'esc_html' => 0,
+		),
+		array (
 			'key' => 'group_devialia_sl_stores_data_6',
 			'label' => 'Dirección a mostrar',
 			'name' => 'display_address',
@@ -580,7 +597,7 @@ acf_add_local_field_group(array (
 		),
 		array (
 			'key' => 'group_devialia_sl_stores_data_9',
-			'label' => 'Locations',
+			'label' => 'Provincia / Localidad',
 			'name' => '',
 			'type' => 'message',
 			'instructions' => '',
@@ -613,23 +630,6 @@ acf_add_local_field_group(array (
 			'prepend' => '',
 			'append' => '',
 			'maxlength' => '',
-		),
-		array (
-			'key' => 'group_devialia_sl_stores_data_8',
-			'label' => 'Descripción',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '100',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
 		),
 	),
 	'location' => array (
