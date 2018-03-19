@@ -12,3 +12,26 @@ function devialia_config_acf_init() {
 	endif;
 }
 add_action('acf/init', 'devialia_config_acf_init');
+
+/**
+* Reorganizo los campos en la página de edición de las stores
+**/
+function reorder_store_fields () {
+	?>
+	<script type="text/javascript">
+		(function($){
+			$(document).ready(function(){
+				$('.acf-field-group-devialia-sl-stores-data-8').append( $('#postdivrich') );
+				$('.acf-field-group-devialia-sl-stores-data-9').append( $('#stores_locationsdiv') );
+			});
+		})(jQuery);
+	</script>
+	<style type="text/css">
+        .acf-field #wp-content-editor-tools {
+            background: transparent;
+            padding-top: 0;
+        }
+    </style>
+	<?php
+}
+add_action('acf/input/admin_head', 'reorder_store_fields');
