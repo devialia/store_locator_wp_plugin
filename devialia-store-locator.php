@@ -39,4 +39,5 @@ include('includes/functions.php');
 include('includes/rol.php');
 include('includes/locales.php');
 include('includes/map-styles.php');
+include('includes/generate-json.php');
 include('includes/store-locator.php');
