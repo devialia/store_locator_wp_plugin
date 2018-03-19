@@ -512,3 +512,90 @@ acf_add_local_field_group(array (
 ));
 
 endif;
+
+/**
+* Creo los campos para las Stores
+**/
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+	'key' => 'group_devialia_sl_stores_data',
+	'title' => 'Datos de la tienda',
+	'fields' => array (
+		array (
+			'key' => 'group_devialia_sl_stores_data_1',
+			'label' => 'Dirección completa',
+			'name' => 'address',
+			'type' => 'google_map',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '100%',
+				'class' => '',
+				'id' => '',
+			),
+			'center_lat' => '',
+			'center_lng' => '',
+			'zoom' => '',
+			'height' => '',
+		),
+		array (
+			'key' => 'group_devialia_sl_stores_data_6',
+			'label' => 'Dirección a mostrar',
+			'name' => 'display_address',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '100',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array (
+			'key' => 'group_devialia_sl_stores_data_7',
+			'label' => 'Código postal',
+			'name' => 'cp',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '33',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'stores',
+			),
+		),
+	),
+	'menu_order' => 3,
+	'position' => 'acf_after_title',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+endif;
