@@ -86,3 +86,18 @@ function devialia_stores_locations() {
 	register_taxonomy( "stores_locations", array( "stores" ), $args );
 }
 add_action( 'init', 'devialia_stores_locations' );
+
+/**
+* Creo la página de opciones del Store Locator
+**/
+if (function_exists('acf_add_options_page')) {
+	acf_add_options_sub_page(array( // Parent page
+		'page_title' => __( "Store Locator Configuration", "devialia-store-locator" ),
+		'menu_title' => __( "Store Locator Configuration", "devialia-store-locator" ),
+		'menu_slug'  => 'devialia-store-locator',
+		'parent_slug'=> 'edit.php?post_type=stores',
+		'position'   => '1',
+		'post_id'    => 'devialia-store-locator',
+		'icon_url'	 => plugin_dir_url( dirname(__FILE__) ) . 'img/icon-devialia.png',
+	));
+}
