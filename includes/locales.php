@@ -113,6 +113,25 @@ acf_add_local_field_group(array (
 	'title' => 'Configuración del mapa',
 	'fields' => array (
 		array (
+			'key' => 'group_devialia_sl_controls_8',
+			'label' => 'Incluir el API de Google Maps?',
+			'name' => 'api',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '25',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 1,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array (
             'key' => 'group_devialia_sl_controls_7',
             'label' => 'API Google Maps',
             'name' => 'api_google_maps',
@@ -121,7 +140,7 @@ acf_add_local_field_group(array (
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array (
-                    'width' => '100',
+                    'width' => '75',
                     'class' => '',
                     'id' => '',
             ),
@@ -417,7 +436,7 @@ acf_add_local_field_group(array (
 			'name' => 'initial_center',
 			'type' => 'google_map',
 			'instructions' => '',
-			'required' => 1,
+			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
 				'width' => '',
