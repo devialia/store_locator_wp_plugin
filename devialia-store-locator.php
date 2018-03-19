@@ -38,3 +38,5 @@ define( "STORE_LOCATOR_CONFIG_PATH", "/wp-admin/edit.php?post_type=stores&page=d
 include('includes/functions.php');
 include('includes/rol.php');
 include('includes/locales.php');
+include('includes/map-styles.php');
+include('includes/store-locator.php');
