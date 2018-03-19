@@ -13,5 +13,6 @@
  * @package         Devialia_Store_Locator
  */
 
+include('includes/functions.php');
 include('includes/rol.php');
 include('includes/locales.php');
