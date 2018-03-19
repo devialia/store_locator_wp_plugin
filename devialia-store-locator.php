@@ -14,3 +14,4 @@
  */
 
 include('includes/rol.php');
+include('includes/locales.php');

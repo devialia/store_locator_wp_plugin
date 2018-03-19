@@ -35,7 +35,7 @@ function devialia_stores_cpt() {
 		"rest_base" => "",
 		"has_archive" => true,
 		"show_in_menu" => true,
-		"menu_position"	=>	1,
+		"menu_position"	=>	2,
 		"exclude_from_search" => false,
 		"capability_type" => "post",
 		"map_meta_cap" => true,
@@ -49,3 +49,40 @@ function devialia_stores_cpt() {
 	register_post_type( "stores", $args );
 }
 add_action( 'init', 'devialia_stores_cpt' );
+
+/**
+* Creación de Custom Taxonomy Stores
+**/
+function devialia_stores_locations() {
+	$labels = array(
+		"name" => __( "Stores Locations", "devialia-store-locator" ),
+		"singular_name" => __( "Store Location", "devialia-store-locator" ),
+		"menu_name" => __( "Locations", "devialia-store-locator" ),
+		"all_items" => __( "All Locations", "devialia-store-locator" ),
+		"edit_item" => __( "Edit Location", "devialia-store-locator" ),
+		"view_item" => __( "View Location", "devialia-store-locator" ),
+		"update_item" => __( "Update Location Name", "devialia-store-locator" ),
+		"add_new_item" => __( "Add New Location", "devialia-store-locator" ),
+		"new_item_name" => __( "New Location Name", "devialia-store-locator" ),
+		"parent_item" => __( "Parent Location", "devialia-store-locator" ),
+	);
+
+	$args = array(
+		"label" => __( "Stores Locations", "devialia-store-locator" ),
+		"labels" => $labels,
+		"public" => true,
+		"hierarchical" => true,
+		"label" => "Stores Locations",
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => array( 'slug' => 'stores_locations', 'with_front' => true, ),
+		"show_admin_column" => true,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"show_in_quick_edit" => true,
+	);
+	register_taxonomy( "stores_locations", array( "stores" ), $args );
+}
+add_action( 'init', 'devialia_stores_locations' );
