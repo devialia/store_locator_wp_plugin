@@ -43,7 +43,7 @@ function devialia_stores_cpt() {
 		"rewrite" => array( "slug" => "store" ),
 		"query_var" => true,
 		"menu_icon" => plugin_dir_url( dirname(__FILE__) ) . "img/store-icon.png",
-		"supports" => array( "title", "editor", "custom-fields" ),
+		"supports" => array( "title", "editor" ),
 	);
 
 	register_post_type( "stores", $args );
