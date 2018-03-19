@@ -13,6 +13,8 @@
  * @package         Devialia_Store_Locator
  */
 
+if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 register_activation_hook( __FILE__, 'check_acf_plugin_installed' );
 function check_acf_plugin_installed(){
     if ( !is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) ) {
